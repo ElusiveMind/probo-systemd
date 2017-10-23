@@ -1,0 +1,8 @@
+[Service]
+ExecStart=/usr/bin/node /opt/probo/probo-bitbucket/bin/probo-bitbucket-handler -c /opt/probo/probo-bitbucket/defaults.yml
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=probo-bitbucket
+User=probo
+Group=probo
