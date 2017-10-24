@@ -1,0 +1,12 @@
+[Unit]
+Description=Open Source Probo Proxy Service
+After=probo-asset-receiver.service
+
+[Service]
+ExecStart=/usr/bin/node /opt/probo/probo-proxy/index.js -c /opt/probo/probo-proxy/defaults.yaml
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=probo-proxy
+User=root
+Group=root

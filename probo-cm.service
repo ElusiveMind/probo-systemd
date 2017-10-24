@@ -1,3 +1,6 @@
+[Unit]
+Description=Open Source Probo Container Manager
+
 [Service]
 ExecStart=/usr/bin/node /opt/probo/probo/bin/probo container-manager -c /opt/probo/probo/bin/probo/cm.yml
 Restart=always

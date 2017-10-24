@@ -1,0 +1,12 @@
+[Unit]
+Description=Open Source Probo Loom
+After=rethinkdb@.service
+
+[Service]
+ExecStart=/usr/bin/node /opt/probo/probo-loom/bin/loom -c /opt/probo/probo-loom/defaults.yaml
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=probo-loom
+User=probo
+Group=probo

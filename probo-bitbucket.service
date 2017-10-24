@@ -1,5 +1,9 @@
+[Unit]
+Description=Open Source Probo Bitbucket Handler
+After=probo-cm.service
+
 [Service]
-ExecStart=/usr/bin/node /opt/probo/probo-bitbucket/bin/probo-bitbucket-handler -c /opt/probo/probo-bitbucket/defaults.yml
+ExecStart=/usr/bin/node /opt/probo/probo-bitbucket/bin/probo-bitbucket-handler -c /opt/probo/probo-bitbucket/defaults.yaml
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
