@@ -10,3 +10,6 @@ StandardError=syslog
 SyslogIdentifier=probo-loom
 User=probo
 Group=probo
+
+[Install]
+WantedBy=multi-user.target

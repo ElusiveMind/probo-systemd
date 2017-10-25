@@ -3,10 +3,13 @@ Description=Open Source Probo Asset Receiver
 After=probo-bitbucket.service
 
 [Service]
-ExecStart=/usr/bin/node /opt/probo/probo-asset-receiver/bin/probo-asset-receiver -c /opt/probo/probo-asset-receiver/defaults.yml
+ExecStart=/usr/bin/node /opt/probo/probo-asset-receiver/bin/probo-asset-receiver -c /opt/probo/probo-asset-receiver/asset-receiver.yaml
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=probo-asset-receiver
 User=probo
 Group=probo
+
+[Install]
+WantedBy=multi-user.target

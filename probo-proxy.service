@@ -10,3 +10,6 @@ StandardError=syslog
 SyslogIdentifier=probo-proxy
 User=root
 Group=root
+
+[Install]
+WantedBy=multi-user.target

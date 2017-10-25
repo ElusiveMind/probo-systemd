@@ -2,10 +2,13 @@
 Description=Open Source Probo Container Manager
 
 [Service]
-ExecStart=/usr/bin/node /opt/probo/probo/bin/probo container-manager -c /opt/probo/probo/bin/probo/cm.yml
+ExecStart=/usr/bin/node /opt/probo/probo/bin/probo container-manager -c /opt/probo/probo/cm.yaml
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=probo-cm
 User=probo
 Group=probo
+
+[Install]
+WantedBy=multi-user.target
